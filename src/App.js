@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
+import { HashRouter ,  Route, Routes } from "react-router-dom";
 import Layout from "./components/pages/Layout";
 import Contact from "./components/pages/Contact";
 import Home from "./components/pages/Home";
@@ -11,8 +11,8 @@ import SendPasswordResetEmail from "./components/pages/auth/SendPasswordResetEma
 
 function App() {
   return ( <>
-  <BrowserRouter>
-  <HashRouter basename="/">
+  <HashRouter>
+  
     <Routes>
        <Route path="/" element= {<Layout/>}>
        <Route index  element={<Home/>}/>
@@ -24,8 +24,8 @@ function App() {
         <Route path="/dashboard"  element={<Dashboard/>}/> 
         {/*<Route path="*" element={<h1>Error 404 Page not found !!</h1>} />*/}
       </Routes>
-      </HashRouter>
-  </BrowserRouter>
+      
+  </HashRouter>
   </>
   );
   
